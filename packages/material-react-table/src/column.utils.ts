@@ -274,6 +274,7 @@ export const getCommonCellStyles = ({
     table.options.layoutMode === 'grid'
       ? `${column.getSize()} 0 auto`
       : undefined,
+  maxWidth: `${column.columnDef.maxSize ?? column.getSize()}px`,
   minWidth: `max(${column.getSize()}px, ${column.columnDef.minSize ?? 30}px)`,
   width: header?.getSize() ?? column.getSize(),
 });
